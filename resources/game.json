@@ -1,0 +1,1 @@
+{"grace_period_time": 600, "commando_period_time": 1800, "informed_period_time": 1200, "default_grace_period_time": 600, "default_commando_period_time": 1800, "default_informed_period_time": 1200, "orange_flag_position": {"x": 1068, "y": 990}, "yellow_flag_position": {"x": 353, "y": 1442}, "orange_flag_placed": false, "yellow_flag_placed": false}

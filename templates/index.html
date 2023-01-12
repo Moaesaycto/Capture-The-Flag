@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="../static/style.css">
+    <script type="text/javascript" src="../static/player_scripts.js"></script>
+    <script type="text/javascript" src="../static/game_scripts.js"></script>
+    <title>Capture the Flag</title>
+</head>
+<body>
+    <div class="title">Capture the Flag</div>
+    <div class="main">
+        <div class="dashboard">
+            <div id="orange" class="orange">
+                <div class="orange-title" style="width: 100%;">
+                   <div>ORANGE TEAM</div>
+                </div>
+                <div class="players" id="orange-players">
+                    <br>
+                </div>
+            </div>
+            <script>
+                fetch(`${window.origin}/player`, {
+                    method: "GET",
+                    credentials: "include",
+                    cache: "no-cache",
+                    headers: new Headers({
+                        "content-type": "application/json"
+                    })
+                }).then(response => response.json()).then(json => name_form_update(json));
+
+                function load_page(json) {
+                    if (json['status']) {
+                        load_session();
+                    }
+                }
+                
+            </script>
+            <div id="center" class="center">
+                <div id="name-form" style="margin-bottom: 30px;" class="name-form">
+                    <div id="error" class="error">Input your name to join the match.</div>
+                    <input type="text" id="name" name="name" placeholder="Your name">
+                    <button class="home-button" id="name-button" onclick="player_register();">Register name</button>
+                </div>
+                <div class="status" id="game-status">
+                    Test
+                </div>
+                <div class="timer">
+                    <p style="font-size: 20px">Time until next event:</p>
+                    <p id="timer" style="font-size: 40px">--:--.---</p>
+                </div>
+                <div class="map" id="map">
+                    <img src="../static/media/clean_map.png">
+                </div>
+                <div class="options" id="player-options">
+                    <a href="map"><button class="register-button" id="register-button">Register Flag</button></a>
+                    <a href="rules"><button class="rules-button" id="rules-button">View rules</button></a>
+                </div>
+            </div>
+            <div id="yellow" class="yellow">
+                <div class="yellow-title" style="width: 100%;">
+                    <div>Yellow TEAM</div>
+                 </div>
+                    <div class="players" id="yellow-players">
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        fetch(`${window.origin}/player/get`, {
+            method: "GET",
+            credentials: "include",
+            cache: "no-cache",
+            headers: new Headers({
+                "content-type": "application/json"
+            })
+        }).then(response => response.json()).then(json => display_teams(json));
+
+        function display_teams(players) {
+            var orange = document.getElementById('orange-players');
+            var yellow = document.getElementById('yellow-players');
+            for (var i = 0; i < Object.keys(players).length; i++) {
+                if (players[Object.keys(players)[i]]['team'] == "o") {
+                    orange.innerHTML += "<p>" + Object.keys(players)[i] + "</p>";
+                }
+                else if (players[Object.keys(players)[i]]['team'] == "y") {
+                    yellow.innerHTML += "<p>" + Object.keys(players)[i] + "</p>";
+                }
+            }
+        }
+    </script>
+</body>

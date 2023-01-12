@@ -1,0 +1,363 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro:200,900');
+@import url(https://fonts.googleapis.com/css?family=Dosis:700);
+
+body {
+    background-color: rgb(240, 248, 255);
+}
+
+.title {
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    font-size: 50px;
+    font-weight: 600;
+    text-shadow: -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255), 2px 2px 0 rgb(255, 255, 255);
+    margin-bottom: 10px;
+}
+
+.main {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 70%;
+    margin: auto;
+    padding: 10px;
+    top: 10%;
+    bottom: 10%;
+    left: 10%;
+    right: 10%;
+    background-color: rgb(203, 204, 216);
+}
+
+.main h1 {
+    width: 100%;
+    text-align: center;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    font-size: 40px;
+    font-weight: 600;
+    text-shadow: -2px -2px 0 rgb(255, 255, 255), 2px -2px 0 rgb(255, 255, 255), -2px 2px 0 rgb(255, 255, 255), 2px 2px 0 rgb(255, 255, 255);    
+}
+
+.section {
+    border-left: 5px solid blue;
+    margin: auto;
+    margin-top: 20px;
+    padding: 10px 0px 10px 10px; 
+    width: 95%;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: rgb(144, 144, 255);
+}
+
+.main p {
+    font-family: "Dosis";
+    font-size: 18px;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: row;
+}
+
+.orange {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 20%;
+    height: 100%;
+    float: right;
+    background-color: rgb(255, 177, 32);
+}
+
+.orange-title {
+    background-color: rgb(218, 218, 218);
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: -2px -2px 0 rgb(255, 191, 73), 2px -2px 0 rgb(255, 191, 73), -2px 2px 0 rgb(255, 191, 73), 2px 2px 0 rgb(255, 191, 73);
+}
+
+.players {
+    text-align: center;
+    font-family: "Dosis";
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    font-size: 15px;
+}
+
+.center {
+    padding-left: 2%;
+    padding-right: 2%;
+    width: 60%;
+    height: 100%;
+    float: left;
+}
+
+.yellow {
+    border: 2px solid;
+    border-radius: 10px;
+    width: 20%;
+    height: 100%;
+    background-color: rgb(252, 255, 47);
+}
+
+.yellow-title {
+    background-color: rgb(218, 218, 218);
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    font-size: 20px;
+    font-weight: 600;
+    text-shadow: -2px -2px 0 rgb(252, 255, 73), 2px -2px 0 rgb(252, 255, 73), -2px 2px 0 rgb(252, 255, 73), 2px 2px 0 rgb(252, 255, 73);
+}
+
+#flex { display: flex; flex-direction: row; }
+#center { order: 2; }
+#yellow { order: 1; }
+#orange { order: 3; }
+
+.status {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(161, 161, 161);
+    width: 100%;
+    text-align: center;
+    font-family: "Dosis";
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    font-size: 35px;
+}
+
+.timer {
+    margin-top: 10px;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(161, 161, 161);
+    width: 100%;
+    text-align: center;
+    font-family: "Dosis";
+    text-transform: uppercase;
+    background-size: cover;
+    background-position: center;
+    font-size: 40px;
+    line-height: 10px;
+}
+
+.map img {
+    margin-top: 10px;
+    width: 100%;
+    border: 2px solid;
+    border-radius: 10px;
+}
+
+.register-button {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    width: 47.5%;
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(127, 161, 255);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    font-weight: 600;
+    float: left;
+}
+
+.register-button:hover {
+    background-color: rgb(106, 136, 219);
+}
+
+.rules-button {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    width: 47.5%;
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(255, 127, 127);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    font-weight: 600;
+    float: right;
+}
+
+.rules-button:hover {
+    background-color: rgb(219, 106, 106);
+}
+
+#register-button , #rules-button {
+    display:inline-block;
+}
+
+.home-button {
+    margin-top: 10px;
+    margin-bottom: 2px;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(157, 255, 127);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.home-button:hover {
+    background-color: rgb(138, 241, 117);
+}
+
+.warning {
+    background-color: rgb(255, 255, 154);
+    border-left: 5px solid orange;
+    width: 80%;
+    margin: auto;
+    padding: 5px;
+    
+}
+
+.warning p {
+    font-size: 16px;
+    padding-left: 80px;
+}
+
+.warning img {
+    flex-basis: 40%;
+    margin-top: 20px;
+    margin-left: 30px;
+    padding-right: 30px;
+    float: left;
+}
+
+.map-interface {
+    width: 45%;
+    margin: auto;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: rgb(161, 161, 161);
+    padding: 10px;
+    float: left;
+}
+
+.map-options {
+    margin-bottom: 100px;
+    margin-left: 50%;
+    margin-right: 2.5%;
+}
+
+.team-name {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin: auto;
+    border: 2px solid;
+    border-radius: 10px;
+    background-color: rgb(161, 161, 161);
+    width: 100%;
+    text-align: center;
+    font-family: "Dosis";
+    text-transform: uppercase;
+    font-size: 30px;
+}
+
+.set-flag-button {
+    margin-top: 10px;
+    width: 100%;
+    align-self: center;
+    padding: 10px 0px 10px 0px;
+    background-color: rgb(255, 127, 127);
+    border-radius: 10px;
+    font-size: 20px;
+    font-family: "Source Code Pro";
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.set-flag-button:hover {
+    background-color: rgb(219, 106, 106);
+}
+
+.name-form {
+    background-color: rgb(255, 110, 110);
+    border: 2px solid;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.error {
+    font-family: "Dosis";
+    text-transform: uppercase;
+    font-size: 20px;
+}
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+
+@media only screen and (max-width: 800px) {
+    .main {
+        width: 80%;
+        left: 5%;
+        right: 5%;
+    }
+
+    .dashboard {
+        flex-direction: column;
+    }
+    
+    .center {
+        float: left;
+        width: 95%;
+    }
+
+    .orange {
+        margin-top: 10px;
+        width: 100%;
+        align-self: center;
+    }
+
+    .yellow {
+        margin-top: 10px;
+        width: 100%;
+        align-self: center;
+    }
+
+    .map-interface {
+        width: 90%;
+        float: none;
+    }
+
+    .map-options {
+        margin-top: 10px;
+        margin-left: 0px;
+        width: 100%;
+    }
+
+    #flex { display: flex; flex-direction: column; }
+    #center { order: 1; }
+    #yellow { order: 3; }
+    #orange { order: 2; }
+
+}

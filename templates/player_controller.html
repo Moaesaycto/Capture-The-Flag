@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='controller.css')}}">
+    <link rel="stylesheet" href="../static/controller.css">
+    <script type="text/javascript" src="../static/player_controller.js"></script>
+    <title>Capture the Flag</title>
+</head>
+<body>
+    <div class="title">Capture the Flag</div>
+    <div class="controller-section">
+        <h1 style="text-align: center;">Player Controller</h1>
+        <div class="team-name" id="team-sign"> 
+            You are not on a team
+        </div>
+        <a href="home"><button class="home-button">Return to game</button></a>
+        <button class="other-button-right" onclick="summon();">Summon Team</button>
+        <div class="clear"></div>
+        <button class="start-button" onclick="declare_victory();">Declare Victory</button>
+        <button class="end-button" onclick="timeout();">Call Time-out</button>
+        <button class="other-button-left" onclick="missing();">Report Missing</button>
+        <button class="other-button-right" onclick="returned();">Report Returned</button>
+    </div>
+</body>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="../static/style.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='controller.css')}}">
+    <link rel="stylesheet" href="../static/controller.css">
+    <title>Capture the Flag</title>
+</head>
+<body>
+    <div class="title">Capture the Flag</div>
+    <div class="controller-section">
+        <h1 style="text-align: center;">Main Controller</h1>
+        <button class="start-button" onclick="start();">Start Game</button>
+        <button class="end-button" onclick="restart();">End Game</button>
+        <button class="other-button-left" onclick="pause();">Pause</button>
+        <button class="other-button-right" onclick="play();">Play</button>
+        <button class="other-button-left" onclick="skip();">Skip Section</button>
+        <button class="other-button-right" onclick="previous();">Previous Section</button>
+        <button class="other-button-left" onclick="restart_section();">Restart Section</button>
+        <button class="other-button-right" onclick="add_five();">Add Five Minutes</button>
+    </div>
+    <br>
+    <div class="controller-section">
+        <h1 style="text-align: center;">Options</h1>
+        <div id="current-grace" style="float: left;">Grace period time:</div>
+        <input type="text" id="grace-period" name="grace-period" class="option-field"><br>
+        <br>
+        <div id="current-commando" style="float: left;">Commando time:</div>
+        <input type="text" id="commando-period" name="commando-period" class="option-field"><br>
+        <br>
+        <div id="current-informed" style="float: left;">Informed period time:</div>
+        <input type="text" id="informed-period" name="informed-period" class="option-field"><br>
+        <button class="player-refresh" onclick="refresh_options();">Refresh</button>
+        <button class="player-submit" onclick="update_options();">Update</button>
+        <div class="clear"></div>
+    </div>
+    <br>
+    <div class="controller-section">
+        <h1 style="text-align: center;">Players</h1>
+        <div class="player-list" id="player-list">   
+            <!-- <script  src="../static/playercontroller.js"></script> -->
+            <script src="{{url_for('static', filename='playercontroller.js')}}"></script>
+        </div>
+        <div>
+            <button class="player-refresh" onclick="refresh_players();">Refresh</button>
+            <button class="player-submit" onclick="update_players();">Update</button>
+        </div>
+        <button class="end-button" onclick="hard_reset();" style="float: None; width: 100%;">HARD RESET</button>
+        <div class="clear"></div>
+    </div>
+</body>

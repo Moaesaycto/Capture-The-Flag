@@ -1,0 +1,60 @@
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <link rel="stylesheet" href="../static/style.css">
+    <title>Capture the Flag</title>
+    <script type="text/javascript" src="../static/2d-slider/jquery.js"></script>
+	<link rel="stylesheet" href="../static/2d-slider/jquery.range2dslider.css">
+	<script type="text/javascript" src="../static/2d-slider/jquery.range2dslider.js"></script>
+    <script type="text/javascript" src="../static/map_scripts.js"></script>
+</head>
+<body>
+    <div class="title">Capture the Flag</div>
+        <div class="main" id="main">
+            <div class="map-interface" id="map-int"">
+                <input id="slider" style="margin-top: 100px;">
+                <script>
+                    window.onerror = function(msg, url, linenumber) {
+                        alert('Error message: '+msg+'\nURL: '+url+'\nLine Number: '+linenumber);
+                        return true;
+                    }
+
+                    $('#slider').range2DSlider({
+                        grid:true,
+                        gridStep:[40,40],
+                        height: Math.round(1.387884268 * document.getElementById('map-int').clientWidth).toString() + 'px',
+                        axis:[[0,200,400,600,800,1000,1200,1400,1600],[0,200,400,600,800,1000,1200,1400,1600,1800]],
+                        projections:false,
+                        showLegend:[0,0],
+                        allowAxisMove:['both'],
+                        printLabel:function( val ){return 'Flag Position';}
+                    })
+                    window.addEventListener("resize", (event) => {$('#slider').range2DSlider({height: Math.round(1.387884268 * document.getElementById('map-int').clientWidth).toString() + 'px'});});
+                    window.addEventListener("resize", (event) => {
+                        if (window.innerWidth > 800) {
+                            document.getElementById("main").style.height = Math.round(1.387884268 * document.getElementById('map-int').clientWidth + 30).toString() + 'px';
+                        } else {
+                            document.getElementById("main").style.height = Math.round(1.387884268 * document.getElementById('map-int').clientWidth + document.getElementById('map-options').clientHeight + 35).toString() + 'px';
+                        }
+                    });
+                </script>
+            </div>
+            <div class="map-options" id="map-options">
+                <div class="team-name" id="team-sign"> 
+                    You are not on a team
+                </div>
+                <button class="set-flag-button" onclick="register_map();">
+                    Register Flag Location
+                </button>
+                <a href="home"><button class="home-button">Return to game</button></a>
+                <div id="response"></div>
+            </div>
+        </div>
+    </div>
+    <script>
+        if (window.innerWidth > 800) {
+            document.getElementById("main").style.height = Math.round(1.387884268 * document.getElementById('map-int').clientWidth + 30).toString() + 'px';
+        } else {
+            document.getElementById("main").style.height = Math.round(1.387884268 * document.getElementById('map-int').clientWidth + document.getElementById('map-options').clientHeight + 60).toString() + 'px';
+        }
+    </script>
+</body>
